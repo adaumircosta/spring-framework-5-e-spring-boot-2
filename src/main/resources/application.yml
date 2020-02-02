@@ -1,19 +1,20 @@
 spring:
   jpa:
-    database: h2
+    database: mysql
+    hibernate:
+      ddl-auto: create
   datasource:
-    url: jdbc:h2:mem:/meubanco
-    platform: h2
-    username: sa
-    driver-class-name: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/dbprojeto1
+    username: root
+    password: adaumirmysql
   
-  h2:
-    console:
-      enabled: true
-      path: /h2
-      settings:
-        trace: false
-        web-allow-others: true
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#      settings:
+#        trace: false
+#       web-allow-others: true
       
       
 server:
